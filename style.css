@@ -1,16 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
-  --base-clr: #11121a;
+  --base-clr: #ffffff;
   --line-clr: #42434a;
   --hover-clr: #222533;
-  --text-clr: #e6e6ef;
+  --text-clr: #000000;
   --accent-clr: #5e63ff;
-  --secondary-text-clr: #b0b3c1;
+  --secondary-text-clr: #000000;
+  --accent-clr-dark: #0400ff;
 }
+  .darkmode{
+    --base-clr: #11121a;
+    --line-clr: #42434a;
+    --hover-clr: #222533;
+    --text-clr: #e6e6ef;
+    --accent-clr: #5e63ff;
+    --secondary-text-clr: #424346;
+    --accent-clr-dark: #5b5b6a;
+  }
 *{
   margin: 0;
   padding: 0;
 }
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+
+
+
+
+button{
+  border: none;
+  padding: .8em 2em;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+.cta-button{
+  background-color: var(--accent-color);
+}
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+#theme-switch svg{
+  fill: var(--primary-color);
+}
+#theme-switch svg:last-child{
+  display: none;
+}
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+.darkmode #theme-switch svg:last-child{
+  display: block;
+}
+
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+
+
+
+
 html{
   font-family: Poppins, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5rem;
@@ -248,5 +314,7 @@ main p{
 }
 
 .downloadclr {
-  color: #fff;
+  color: var(--accent-clr-dark);
+
+  text-decoration: none;
 }
